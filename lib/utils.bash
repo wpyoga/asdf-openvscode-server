@@ -43,7 +43,7 @@ list_all_versions() {
   # - bin/openvscode-server is ready to use out of the box
   # - server.sh has been removed
   #
-  list_github_tags | grep 'openvscode-server-v[0-9]'
+  list_github_tags | grep 'openvscode-server-v[0-9]' | sed -e 's/^openvscode-server-v//'
 }
 
 download_release() {
