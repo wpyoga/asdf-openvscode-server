@@ -27,6 +27,7 @@ if [ -f "$ASDF_DOWNLOAD_PATH/server.sh" ]; then
   (
     cd "$ASDF_DOWNLOAD_PATH/bin"
     mv -f ../server.sh openvscode-server
+    # shellcheck disable=SC2016
     sed -i openvscode-server -e 's/^ROOT=.*/ROOT=$(dirname "$(dirname "$0")")/'
   )
 fi
