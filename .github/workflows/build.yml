@@ -13,7 +13,8 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
-          - macos-latest
+# uncomment this as soon as macos is supported by openvscode-server
+#          - macos-latest
     runs-on: ${{ matrix.os }}
     steps:
       - name: asdf_plugin_test
